@@ -1,0 +1,13 @@
+#inner2{
+    margin: 10px;
+}
+#inner22{
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgb(92, 92, 92);
+}
+#inner22-{
+    gap: 20px;
+}
