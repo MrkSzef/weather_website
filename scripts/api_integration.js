@@ -1,5 +1,10 @@
 export const get_info = (query) =>{
-    fetch(`http://api.weatherapi.com/v1/current.json?key=d416a137d8604eae881223651231803&q=${query}`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=d416a137d8604eae881223651231803 &q=${query}&aqi=no`, {
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin':'*'
+        }
+      })
     .then(element => element.json())
     .then(element => {
         document.getElementById("humidity2").innerText = `${element['current']['humidity']}%`
