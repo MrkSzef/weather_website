@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <!--fonts-->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -10,14 +9,17 @@
     <link rel="stylesheet" href="styles/search_box.css">
     <link rel="stylesheet" href="styles/main_container.css">
     <link rel="stylesheet" href="styles/main_container_looks.css">
-    
+    <link rel="stylesheet" href="styles/day_box.css">
+
     <!--external_code-->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     
     <!--scripts-->
     <script type="module" src="scripts/search_box.js"></script>
     <script src="scripts/setup.js"></script>
-</head> 
+    <script src="scripts/search_box.js"></script>
+
+</head>     
 <body>
     <div class="Main_container" data-position="0">
         <span id="inner1" class="container">
@@ -70,6 +72,34 @@
                     </span>
                 </span>
             </span>
+        </span>
+        <span id="inner3">
+            <div id="main_graph_container" class="graph_container" data-ready="0">
+                <span id="day_0" class="sector">
+                    <img class="day_image" src="">
+                    <label class="day_label dl1" data-temp=""></label>
+                    <label class="day_label dl2" data-temp=""></label>
+                </span>
+                <span id="day_1" class="sector">
+                    <img class="day_image" src="">
+                    <label class="day_label dl1" data-temp=""></label>
+                    <label class="day_label dl2" data-temp=""></label>
+                </span>
+                <span id="day_2" class="sector">
+                    <img class="day_image" src="">
+                    <label class="day_label dl1" data-temp=""></label>
+                    <label class="day_label dl2" data-temp=""></label>
+                </span>
+                <span id="day_3" class="sector">
+                    <img class="day_image" src="">
+                    <label class="day_label dl1" data-temp=""></label>
+                    <label class="day_label dl2" data-temp=""></label>
+                </span>
+                <span id="day_4" class="sector">
+                    <img class="day_image" src="">
+                    <label class="day_label dl1" data-temp=""></label>
+                    <label class="day_label dl2" data-temp=""></label>
+                </span>
         </span>
     </div>
 </body>    

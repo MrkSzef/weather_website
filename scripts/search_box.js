@@ -2,11 +2,11 @@ import { get_info } from './api_integration.js';
 
 window.onload = function(){
     document.getElementsByClassName("search_widget")[0].addEventListener("click",open_close)
-    document.getElementsByClassName("search_widget")[0].addEventListener("mouseleave",function () {
-        if(document.getElementsByClassName("search_bar")[0].value == ""){
-            close_search()
-        };
-    });
+    //document.getElementsByClassName("search_widget")[0].addEventListener("mouseleave",function () {
+    //    if(document.getElementsByClassName("search_bar")[0].value == ""){
+    //        close_search()
+    //    };
+    //});
     document.getElementsByClassName("search_widget")[0].addEventListener("keypress", function (e) {
         if (e.key === 'Enter') {
             close_search()

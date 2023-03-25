@@ -1,9 +1,19 @@
+html{
+    background-color: rgb(0, 0, 0);
+}
 body{
     display: flex;
     justify-content: center;
     
 }
+#inner3{
+    width: 90%;
+    display: flex;
+}
 .Main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 300px;
     height: 75px;
     background-color:rgb(70, 70, 70);
@@ -14,8 +24,8 @@ body{
 }
 
 .Main_container[data-position="1"]{
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 350px;
 }
 #inner1{
     width: auto;
@@ -57,4 +67,17 @@ body{
 #inner15[data-show="1"]{
     display: flex;
     justify-content: space-around;
+}
+#inner2{
+    margin: 10px;
+}
+#inner22{
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 2px;
+    background-color: rgb(92, 92, 92);
+}
+#inner22-{
+    gap: 20px;
 }
