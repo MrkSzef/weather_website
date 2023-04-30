@@ -45,8 +45,9 @@ export const get_info = (query) =>{
             okienka[i].getElementsByTagName("label")[1].setAttribute("data-text",((element['forecast']['forecastday'][i]['date']).split("-").slice(1,3).reverse()).join("-"))
             okienka[i].setAttribute("data-temp",`${element['forecast']['forecastday'][i]['day']['mintemp_c']}°C - ${element['forecast']['forecastday'][i]['day']['maxtemp_c']}°C`)
             okienka[i].getElementsByTagName("img")[0].src = element['forecast']['forecastday'][i]['day']['condition']['icon']
-        
             
+            
+            Array.from(okienka[i].getElementsByTagName("label")[2].childNodes).forEach(element => element.remove())
             okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Wiatr: ${element['forecast']['forecastday'][i]['day']['maxwind_kph']} km/h`))
             okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Widoczność: ${element['forecast']['forecastday'][i]['day']['avgvis_km']} km`))
             okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Wilgotność: ${element['forecast']['forecastday'][i]['day']['avghumidity']} %`))
