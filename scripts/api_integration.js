@@ -5,9 +5,14 @@ function getDayName(dateStr, locale)
     var date = new Date(dateStr);
     return date.toLocaleDateString(locale, { weekday: 'long' });        
 }
+function quick_elm(type,inside){
+    const element = document.createElement(type)
+    element.innerText = inside
+    return element
+};
 
 export const get_info = (query) =>{
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=d416a137d8604eae881223651231803&q=${query}&days=5&aqi=yes&alerts=yes`, {
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=249b40226adf443f933140617233004&q=${query}&days=5&aqi=yes&alerts=yes`, {
         mode: 'cors',
         headers: {
           'Access-Control-Allow-Origin':'*'
@@ -32,7 +37,6 @@ export const get_info = (query) =>{
             //document.getElementById("inner15").setAttribute("data-show","1")
         },800)
         let okienka = Array.from(document.getElementsByClassName("sector"));
-        console.log(okienka);
         for (let i = 0; i < okienka.length; i++) {
 
             okienka[i].getElementsByTagName("label")[0].innerText = getDayName(element['forecast']['forecastday'][i]['date'],"pl-PL")
@@ -41,6 +45,15 @@ export const get_info = (query) =>{
             okienka[i].getElementsByTagName("label")[1].setAttribute("data-text",((element['forecast']['forecastday'][i]['date']).split("-").slice(1,3).reverse()).join("-"))
             okienka[i].setAttribute("data-temp",`${element['forecast']['forecastday'][i]['day']['mintemp_c']}°C - ${element['forecast']['forecastday'][i]['day']['maxtemp_c']}°C`)
             okienka[i].getElementsByTagName("img")[0].src = element['forecast']['forecastday'][i]['day']['condition']['icon']
+        
+            
+            okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Wiatr: ${element['forecast']['forecastday'][i]['day']['maxwind_kph']} km/h`))
+            okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Widoczność: ${element['forecast']['forecastday'][i]['day']['avgvis_km']} km`))
+            okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Wilgotność: ${element['forecast']['forecastday'][i]['day']['avghumidity']} %`))
+            okienka[i].getElementsByTagName("label")[2].appendChild(quick_elm('span',`Szansa na opady: ${element['forecast']['forecastday'][i]['day']['daily_chance_of_rain']} %`))
+
+            //okienka[i].getElementsByTagName("label")[2].setAttribute("data-text",((element['forecast']['forecastday'][i]['date']).split("-").slice(1,3).reverse()).join("-"))
+        
         }
         setTimeout(function (){document.getElementById("main_graph_container").setAttribute("data-ready","1")},1200)
         
