@@ -1,0 +1,47 @@
+
+@keyframes append-animate {
+	from {
+        transform: translateY(-50px);
+		opacity: 0;
+	}
+    15%{
+        transform: translateY(0);
+		opacity: 1;	
+    }
+    85%{
+        transform: translateY(0);
+		opacity: 1;	
+    }
+	to {
+        transform: translateY(-50px);
+		opacity: 0;
+	}
+}
+#Notifications{
+    position: fixed;
+}
+.notification{
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    font-weight: 800;
+    color:whitesmoke;
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gray;
+    border-radius: 15px;
+    top: 0%;
+    transform: translateY(-200px);
+    position: absolute;
+    border-top: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    animation:append-animate 5s ease-in;
+    animation-timing-function: cubic-bezier(.70,.3,.3,.7);
+    background: rgb(70, 70, 70);
+}

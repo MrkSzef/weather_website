@@ -19,11 +19,7 @@ window.onload = function(){
             document.getElementsByClassName("search_bar")[0].focus()
             document.getElementsByClassName("search_widget")[0].removeEventListener("click",open_close)
         } 
-        else{
-            elm.setAttribute("data-is-clicked","0");
-            document.getElementsByClassName("search_bar")[0].blur()
-            document.getElementsByClassName("search_widget")[0].addEventListener("click",open_close)
-        }
+
     }; 
     function close_search(){
         let elm = document.getElementsByClassName("search_widget")[0]

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/main_container.css">
     <link rel="stylesheet" href="styles/main_container_looks.css">
     <link rel="stylesheet" href="styles/day_box.css">
+    <link rel="stylesheet" href="styles/notification.css">
 
     <!--external_code-->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
@@ -19,8 +20,12 @@
     <script src="scripts/setup.js"></script>
     <script src="scripts/search_box.js"></script>
     <script src="scripts/day_box.js"></script>
+    <script src="scripts/notifications.js"></script>
+
 </head>     
 <body>
+    <div id="Notifications"></div>
+
     <div class="Main_container" data-position="0">
         <span id="inner1" class="container">
             <div class="search_widget" data-is-clicked="0">
@@ -29,49 +34,6 @@
                     <img class="search" src="assets/search.png">
                 </span>
             </div>
-        </span>
-        <span id="inner15" class="container" data-show="0">
-            <span id="country_container">
-                <label id="country2" class="color"></label>
-            </span>
-            <span id="local_time_container">
-                <label id="local_time2" class="color"></label>
-            </span>
-        </span>
-        <span id="inner2" class="container" data-show="0">
-            <span id="inner21" class="container">
-                <img id="inner211" src="" width="86">
-            </span>
-            <span id="inner22" class="container">
-                <span id="inner221" class="container inner22-">
-                    <span id="humidity_container">
-                        <label id="humidity1" class="color">wilgotność:</label>
-                        <label id="humidity2" class="color"></label>
-                    </span>
-                    <span id="wind_container">
-                        <label id="wind1" class="color">wiatr:</label>
-                        <label id="wind2" class="color"></label>
-                    </span>
-                    <span id="ftemp_container">
-                        <label id="ftemp1" class="color">odcz_temp:</label>
-                        <label id="ftemp2" class="color"></label>
-                    </span>
-                </span>
-                <span id="inner222" class="container inner22-">
-                    <span id="temp_container">
-                        <label id="temp1" class="color">temp:</label>
-                        <label id="temp2" class="color"></label>
-                    </span>
-                    <span id="wind_dir_container">
-                        <label id="wind_dir1" class="color">kierunek_wia:</label>
-                        <label id="wind_dir2" class="color"></label>
-                    </span>
-                    <span id="visibility_container">
-                        <label id="visibility1" class="color">widoczność:</label>
-                        <label id="visibility2" class="color"></label>
-                    </span>
-                </span>
-            </span>
         </span>
         <span id="inner3">
             <div id="main_graph_container" class="graph_container" data-ready="0">
