@@ -14,7 +14,7 @@ function quick_elm(type,inside,classname){
 };
 
 export const get_info = (query) =>{
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=249b40226adf443f933140617233004&q=${query}&days=5&aqi=yes&alerts=yes`, {
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=99573485b62a4e7baca90203231705=${query}&days=5&aqi=yes&alerts=yes`, {
         mode: 'cors',
         headers: {
           'Access-Control-Allow-Origin':'*'
